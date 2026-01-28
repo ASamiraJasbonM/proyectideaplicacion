@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adriana Jasbón | Ingeniería Biomédica</title>
+    <!-- Vinculamos la hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuente profesional (Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 1. ENCABEZADO / HEADER -->
+    <header class="header-principal">
+        <div class="container">
+            <h1>Adriana Samira Jasbón Mutis</h1>
+            <p class="subtitulo">Bioingeniera | Máster en Ingeniería Biomédica</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. INTRODUCCIÓN AL TEMA (Requisito: Introducción) -->
+        <section id="sobre-mi" class="seccion">
+            <div class="container">
+                <h2>Soluciones Tecnológicas en Salud</h2>
+                <p>
+                    Bienvenido. Soy especialista en el desarrollo de proyectos que integran la ingeniería con las necesidades clínicas.
+                    Ofrezco servicios de consultoría y desarrollo en <strong>análisis ergonómico</strong>, creación de <strong>herramientas de software</strong> 
+                    para soporte a la salud y gestión de cuidados para adultos mayores, así como la implementación de modelos de 
+                    <strong>Inteligencia Artificial</strong> para optimizar procesos médicos.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. GALERÍA DE PROYECTOS / SERVICIOS (Requisito: Galería de imágenes) -->
+        <section id="servicios" class="seccion fondo-gris">
+            <div class="container">
+                <h2>Áreas de Desarrollo</h2>
+                <div class="galeria-grid">
+                    
+                    <!-- Tarjeta 1: Ergonomía -->
+                    <div class="card">
+                        <!-- Usamos placeholders (imágenes de prueba) para que se vea bien de inmediato -->
+                        <img src="https://placehold.co/600x400/2c3e50/ffffff?text=Analisis+Ergonomico" alt="Gráfico de ergonomía">
+                        <h3>Análisis Ergonómico</h3>
+                        <p>Estudios biomecánicos para mejorar entornos laborales y de rehabilitación.</p>
+                    </div>
+
+                    <!-- Tarjeta 2: Software de Salud -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/27ae60/ffffff?text=App+Gestion+Salud" alt="Interfaz de App Médica">
+                        <h3>Gestión de Medicación</h3>
+                        <p>Apps para cuidadores de adultos mayores: control de dosis y alertas en tiempo real.</p>
+                    </div>
+
+                    <!-- Tarjeta 3: Inteligencia Artificial -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/8e44ad/ffffff?text=Modelos+IA" alt="Redes neuronales">
+                        <h3>Modelos de IA</h3>
+                        <p>Algoritmos predictivos para diagnóstico asistido y optimización de recursos hospitalarios.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN INTERACTIVA (Requisito: Formulario + Backend) -->
+        <section id="contacto" class="seccion">
+            <div class="container">
+                <h2>Contacto y Consultas</h2>
+                <p>Déjame un mensaje sobre tu necesidad o proyecto. Los mensajes se procesan en nuestro servidor Node.js.</p>
+                
+                <div class="contenedor-interactivo">
+                    <!-- A. El Formulario -->
+                    <div class="formulario-box">
+                        <form id="form-comentarios">
+                            <div class="campo">
+                                <label for="nombre">Nombre o Empresa:</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Ej. Clínica Santa María" required>
+                            </div>
+                            <div class="campo">
+                                <label for="mensaje">Consulta o Requerimiento:</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente el proyecto..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Enviar Consulta</button>
+                        </form>
+                    </div>
+
+                    <!-- B. Visualización de Datos (Requisito: Mostrar datos en la misma página) -->
+                    <div class="resultados-box">
+                        <h3>Historial de Consultas (En tiempo real)</h3>
+                        <ul id="lista-comentarios">
+                            <!-- Aquí JavaScript insertará los datos que vengan del Backend -->
+                            <li>Cargando datos del servidor...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Adriana Jasbón Mutis - Ingeniería Biomédica. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- 5. VINCULACIÓN CON JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>

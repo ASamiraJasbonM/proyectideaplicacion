@@ -1,0 +1,219 @@
+/* style.css - Diseño Tema Oscuro Biomédico */
+
+/* 1. VARIABLES DE COLOR (Buenas prácticas de Ingeniería) */
+:root {
+    --fondo-principal: #050A14;    /* Azul muy oscuro (casi negro) */
+    --texto-principal: #FFFFFF;    /* Blanco puro */
+    --bloque-azul: #1E3A5F;        /* Azul claro / acero para las tarjetas */
+    --bloque-hover: #274970;       /* Un poco más claro al pasar el mouse */
+    --acento: #00D4FF;             /* Cian brillante para botones/enlaces (toque tecnológico) */
+    --borde-suave: #2C3E50;
+}
+
+/* 2. RESET Y ESTILOS GENERALES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--fondo-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
+}
+
+/* Contenedor centralizado para que el contenido no se estire demasiado */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 3. ENCABEZADO */
+.header-principal {
+    background-color: #020408; /* Un tono más oscuro que el fondo para distinguir */
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 3px solid var(--bloque-azul);
+}
+
+.header-principal h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--acento); /* Nombre en azul neón/cian */
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* 4. SECCIONES Y TÍTULOS */
+.seccion {
+    padding: 60px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--bloque-azul);
+    display: inline-block;
+    padding-bottom: 10px;
+    /* Truco para centrar el borde del título */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 5. GALERÍA DE TARJETAS (El requerimiento del color azul claro) */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--bloque-azul); /* Aquí aplicamos el azul claro solicitado */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: var(--bloque-hover);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    opacity: 0.9; /* Un poco opacas para fusionarse con el tema oscuro */
+}
+
+.card:hover img {
+    opacity: 1;
+}
+
+.card h3 {
+    padding: 20px 20px 10px 20px;
+    color: var(--acento);
+}
+
+.card p {
+    padding: 0 20px 20px 20px;
+    font-size: 0.95rem;
+    color: #E0E0E0; /* Blanco ligeramente gris para leer mejor */
+}
+
+/* 6. FORMULARIO E INTERACCIÓN */
+.contenedor-interactivo {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: Formulario y Lista */
+    gap: 40px;
+}
+
+/* En pantallas pequeñas (móvil), poner una columna debajo de otra */
+@media (max-width: 768px) {
+    .contenedor-interactivo {
+        grid-template-columns: 1fr;
+    }
+}
+
+.formulario-box, .resultados-box {
+    background-color: var(--bloque-azul);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--acento);
+}
+
+/* Estilos de los inputs para que se vean bien en fondo oscuro */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #050A14; /* Fondo oscuro dentro del input */
+    border: 1px solid #4A6fa5;
+    color: white;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--acento);
+    box-shadow: 0 0 5px rgba(0, 212, 255, 0.3);
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--acento);
+    color: #050A14; /* Texto oscuro para contraste con el botón brillante */
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #33e0ff;
+}
+
+/* 7. LISTA DE COMENTARIOS (BACKEND RESULTADOS) */
+#lista-comentarios {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto; /* Scroll si hay muchos mensajes */
+}
+
+#lista-comentarios li {
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 4px solid var(--acento);
+    border-radius: 4px;
+}
+
+#lista-comentarios strong {
+    color: var(--acento);
+    display: block;
+    margin-bottom: 5px;
+}
+
+#lista-comentarios small {
+    color: #8899a6;
+    font-size: 0.8rem;
+}
+
+/* 8. PIE DE PÁGINA */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 40px;
+    border-top: 1px solid var(--bloque-azul);
+    font-size: 0.9rem;
+    color: #888;
+}
