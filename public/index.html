@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adriana Jasbón | Ingeniería Biomédica</title>
+    
     <!-- Vinculamos la hoja de estilos -->
+    <!-- Nota: El ?v=1.1 fuerza al navegador a cargar los cambios nuevos -->
     <link rel="stylesheet" href="style.css">
+    
     <!-- Fuente profesional (Google Fonts) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -20,7 +23,7 @@
     </header>
 
     <main>
-        <!-- 2. INTRODUCCIÓN AL TEMA (Requisito: Introducción) -->
+        <!-- 2. INTRODUCCIÓN AL TEMA -->
         <section id="sobre-mi" class="seccion">
             <div class="container">
                 <h2>Soluciones Tecnológicas en Salud</h2>
@@ -33,43 +36,79 @@
             </div>
         </section>
 
-        <!-- 3. GALERÍA DE PROYECTOS / SERVICIOS (Requisito: Galería de imágenes) -->
+        <!-- 3. GALERÍA DE PROYECTOS (9 Imágenes) -->
         <section id="servicios" class="seccion fondo-gris">
             <div class="container">
-                <h2>Áreas de Desarrollo</h2>
+                <h2>Portafolio de Proyectos</h2>
                 <div class="galeria-grid">
                     
-                    <!-- Tarjeta 1: Ergonomía -->
+                    <!-- === TEMA 1: ERGONOMÍA Y BIOMECÁNICA === -->
                     <div class="card">
-                        <!-- Usamos placeholders (imágenes de prueba) para que se vea bien de inmediato -->
-                        <img src="https://placehold.co/600x400/2c3e50/ffffff?text=Analisis+Ergonomico" alt="Gráfico de ergonomía">
-                        <h3>Análisis Ergonómico</h3>
-                        <p>Estudios biomecánicos para mejorar entornos laborales y de rehabilitación.</p>
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600&auto=format&fit=crop" alt="Laboratorio de análisis biomecánico">
+                        <h3>Análisis Biomecánico</h3>
+                        <p>Evaluación de movimiento y postura en entornos laborales para prevención de lesiones.</p>
                     </div>
 
-                    <!-- Tarjeta 2: Software de Salud -->
                     <div class="card">
-                        <img src="https://placehold.co/600x400/27ae60/ffffff?text=App+Gestion+Salud" alt="Interfaz de App Médica">
+                        <!-- IMAGEN CORREGIDA: Brazo Robótico/Biónico (Enlace estable) -->
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=600&auto=format&fit=crop" alt="Ingeniero ajustando prótesis robótica">
+                        <h3>Diseño de Prótesis</h3>
+                        <p>Modelado y adaptación ergonómica de dispositivos de asistencia física.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop" alt="Espacio de trabajo ergonómico">
+                        <h3>Ergonomía Ocupacional</h3>
+                        <p>Consultoría para optimizar estaciones de trabajo y reducir la fatiga muscular.</p>
+                    </div>
+
+                    <!-- === TEMA 2: SOFTWARE Y GESTIÓN DE SALUD === -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=600&auto=format&fit=crop" alt="Tablet con datos médicos">
                         <h3>Gestión de Medicación</h3>
-                        <p>Apps para cuidadores de adultos mayores: control de dosis y alertas en tiempo real.</p>
+                        <p>App intuitiva para recordatorios de dosis y seguimiento de tratamientos.</p>
                     </div>
 
-                    <!-- Tarjeta 3: Inteligencia Artificial -->
                     <div class="card">
-                        <img src="https://placehold.co/600x400/8e44ad/ffffff?text=Modelos+IA" alt="Redes neuronales">
-                        <h3>Modelos de IA</h3>
-                        <p>Algoritmos predictivos para diagnóstico asistido y optimización de recursos hospitalarios.</p>
+                        <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?q=80&w=600&auto=format&fit=crop" alt="Cuidado de adulto mayor">
+                        <h3>Asistencia al Cuidador</h3>
+                        <p>Plataforma de soporte para cuidadores de adultos mayores con alertas en tiempo real.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=600&auto=format&fit=crop" alt="Telemedicina y monitoreo">
+                        <h3>Monitoreo Remoto</h3>
+                        <p>Integración de wearables para el seguimiento constante de signos vitales.</p>
+                    </div>
+
+                    <!-- === TEMA 3: INTELIGENCIA ARTIFICIAL E INNOVACIÓN === -->
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=600&auto=format&fit=crop" alt="Redes neuronales y cerebro">
+                        <h3>Modelos Predictivos IA</h3>
+                        <p>Algoritmos de Machine Learning para la detección temprana de patologías.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?q=80&w=600&auto=format&fit=crop" alt="Microscopio y análisis de datos">
+                        <h3>Bioinformática</h3>
+                        <p>Procesamiento de grandes volúmenes de datos genómicos y clínicos.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop" alt="Seguridad de datos médicos">
+                        <h3>Ciberseguridad Médica</h3>
+                        <p>Protección de datos sensibles y cumplimiento de normativas en software de salud.</p>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <!-- 4. SECCIÓN INTERACTIVA (Requisito: Formulario + Backend) -->
+        <!-- 4. SECCIÓN INTERACTIVA (Backend Integrado) -->
         <section id="contacto" class="seccion">
             <div class="container">
                 <h2>Contacto y Consultas</h2>
-                <p>Déjame un mensaje sobre tu necesidad o proyecto. Los mensajes se procesan en nuestro servidor Node.js.</p>
+                <p>Déjame un mensaje sobre tu necesidad o proyecto. Los datos se almacenan de forma segura en nuestro servidor.</p>
                 
                 <div class="contenedor-interactivo">
                     <!-- A. El Formulario -->
@@ -87,12 +126,12 @@
                         </form>
                     </div>
 
-                    <!-- B. Visualización de Datos (Requisito: Mostrar datos en la misma página) -->
+                    <!-- B. Visualización de Datos -->
                     <div class="resultados-box">
-                        <h3>Historial de Consultas (En tiempo real)</h3>
+                        <h3>Historial de Consultas</h3>
                         <ul id="lista-comentarios">
-                            <!-- Aquí JavaScript insertará los datos que vengan del Backend -->
-                            <li>Cargando datos del servidor...</li>
+                            <!-- Aquí JavaScript insertará los datos que vengan de la Base de Datos -->
+                            <li>Cargando datos...</li>
                         </ul>
                     </div>
                 </div>
